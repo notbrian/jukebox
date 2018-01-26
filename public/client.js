@@ -51,6 +51,11 @@ function sendOptions(e) {
   let data;
   const genre = localStorage.getItem('genreSelect')
   const date = document.querySelector("#date").value
+
+  if (date == undefined || genre == undefined) {
+    alert("Please select a date and a genre!")
+    return
+  }
   data = JSON.stringify([genre, date])
 
   var request = new XMLHttpRequest();
