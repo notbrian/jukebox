@@ -54,7 +54,7 @@ function sendOptions(e) {
   data = JSON.stringify([genre, date])
 
   var request = new XMLHttpRequest();
-  request.open('POST', "http://localhost:3000", true);
+  request.open('POST', "https://rewindjukebox.herokuapp.com/", true);
   request.setRequestHeader("Content-type", "text/plain");
   request.send(data);
 
